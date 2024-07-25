@@ -10,6 +10,14 @@ api_key = st.secrets["OPENAI_API_KEY"] # for streamlit cloud
 # load_dotenv()
 # api_key = os.getenv('OPENAI_API_KEY')
 
+# [hide github icon in streamlit]
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
+
 client = OpenAI(api_key=api_key)
 model = "gpt-3.5-turbo"
 
