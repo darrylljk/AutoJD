@@ -4,8 +4,11 @@ from dotenv import load_dotenv
 import os
 import time
 
-load_dotenv()
-api_key = os.getenv('OPENAI_API_KEY')
+api_key = st.secrets["OPENAI_API_KEY"] # for streamlit cloud
+
+# [uncomment below if running local, store api key in .env file]
+# load_dotenv()
+# api_key = os.getenv('OPENAI_API_KEY')
 
 client = OpenAI(api_key=api_key)
 model = "gpt-3.5-turbo"
