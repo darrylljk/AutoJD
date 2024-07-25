@@ -10,14 +10,6 @@ api_key = st.secrets["OPENAI_API_KEY"] # for streamlit cloud
 # load_dotenv()
 # api_key = os.getenv('OPENAI_API_KEY')
 
-# [hide github icon in streamlit]
-hide_github_icon = """
-#GithubIcon {
-  visibility: hidden;
-}
-"""
-st.markdown(hide_github_icon, unsafe_allow_html=True)
-
 client = OpenAI(api_key=api_key)
 model = "gpt-3.5-turbo"
 
@@ -77,6 +69,14 @@ def generate_job_description(job_title, company, experience, education, degree, 
     return response.choices[0].message.content.strip()
 
 def main():
+    # [hide github icon in streamlit]
+    hide_github_icon = """
+    #GithubIcon {
+      visibility: hidden;
+    }
+    """
+    st.markdown(hide_github_icon, unsafe_allow_html=True)
+
     st.set_page_config(page_title="AutoJD", page_icon="✍️")
     st.title('AutoJD')
     st.write('''
@@ -120,6 +120,8 @@ def main():
         st.subheader("Generated Job Description:")
         st.write(job_description)
         st.download_button(label="Download Job Description as TXT", data=job_description, file_name="job_description.txt", mime="text/plain")
+
+  
 
 if __name__ == "__main__":
     main()
