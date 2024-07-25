@@ -21,3 +21,6 @@ With these inputs, AutoJD generates a professional and detailed job description 
 - Fill in the form with the required job details.
 - Generate and download your job description.
 Find the perfect fit for your team with AutoJD! 🚀
+
+## Gallery
+![autojd-ds](https://github.com/user-attachments/assets/81b5f60a-e648-442c-a867-3c7155814b99)
