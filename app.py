@@ -96,9 +96,9 @@ def main():
         job_title = st.text_input("Job Title", "Data Scientist")
         company = st.text_input('Company', 'Amazon')
         experience = st.selectbox('Work Experience', ['0-2 years', '3-5 years', '5-10 years', 'More than 10 years'])
-        education = st.selectbox('Education', ['Diploma', 'Bachelor', 'Master', 'PhD'])
+        education = st.selectbox('Education', ['Diploma', 'Bachelor', 'Master', 'PhD'], default=['Bachelor'])
         degree = st.multiselect('Major', ['Any', 'Engineering', 'Business', 'Finance', 'Computing', 'Data Science', 'Accountancy', 'Arts and Social Science', 'Psychology', 'Communications'], default=['Data Science'])
-        skills = st.text_area('Skills', 'Proficiency in Python, SQL, Big Data, Cloud Computing, and Data Visualization tools.', help='List the skills required for the position')
+        skills = st.text_area('Skills', 'Proficiency in Python, SQL, Big Data, AWS, Machine Learning, Statistical Analysis, ETL, and Data Visualization tools.', help='List the skills required for the position')
         submit_button = st.form_submit_button(label='Generate Job Description')
    
     if submit_button:
