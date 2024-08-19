@@ -1,6 +1,8 @@
 # AutoJD ✍️
 AutoJD is your go-to solution for creating comprehensive job descriptions effortlessly. Whether you're hiring for a new position or updating an existing role, AutoJD simplifies the process, ensuring you capture all the essential details in a well-structured format.
 
+Try it here: https://autojd.streamlit.app/
+
 ## Features
 - Job Title: Start by entering the job title.
 - Company: Specify the company or department that is hiring.
